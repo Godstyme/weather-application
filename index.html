@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <main>
+    <header class="header">
+      <h1 class="caption">Forcasts</h1>
+        <form id="searchForm" class="search-form">
+          <div class="btnHolder">
+            <!-- <label for="searchInput"><i class="fas fa-search-location icon"></i></label> -->
+            <input type="search" name="search" id="inputSearch" class="searchInput" autocomplete="off"
+                placeholder="Search for a location">
+            <input type="button" value="Search" class="btn">
+          </div>
+        </form>
+    </header>
+    <section class="mainbody">
+      <div class="mainInfo">
+        <div class="dayHolder">
+          <address>Abakaliki, <span>NG</span></address>
+          <span class="date">Tue, &nbsp; Sept 09</span>
+        </div>
+        <div class="temp">32&#176;C</div>
+        <div class="weatherDesc"><span>logo</span> Rain</div>
+        <div class="curSummary">
+          <table class="currentTableSumm">
+            <tr class="curDataRow">
+              <th class="todayRowSumm">Morning</th>
+              <th class="todayRowSumm">Afternoon</th>
+              <th class="todayRowSumm">Evening</th>
+              <th class="todayRowSumm">Night</th>
+            </tr>
+            <tr class="curDataRow">
+              <td class="curData">32&#176;C</td>
+              <td class="curData">32&#176;C</td>
+              <td class="curData">32&#176;C</td>
+              <td class="curData">32&#176;C</td>
+            </tr>
+            <tr class="curDataRow">
+              <td rowspan="3">Range</td>
+              <td >Range</td>
+              <td >Range</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
