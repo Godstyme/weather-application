@@ -10,7 +10,6 @@
 /* ==== main layout style ======= */
 main{
   width: 100%;
-  /* min-height: 100vh; */
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url(../imgs/bgg.jpeg);
   background-size: cover;
   background-position: center center;
@@ -229,9 +228,28 @@ footer > div{
 
 /* ==== media query for the following devices start here ======= */
 @media screen and (max-width: 800px) and (min-width: 451px){
+  main{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url(../imgs/bgg.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+  }
+  input.searchInput{
+    width: 70%;
+    height: 3em;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border: 1px solid var(--color,#fff);
+    outline: none;
+    padding-left: 0.8em;
+    font-size: 0.9em;
+  }
   input.btn{
     height: 2.15em;
-    width: 15%;
+    width: 20%;
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6));
     cursor: pointer;
     outline: none;
