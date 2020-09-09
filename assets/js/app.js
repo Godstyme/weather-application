@@ -27,5 +27,4 @@ const displayRecord = (weather) => {
   const country = document.querySelector('.country').innerHTML = `${weather.sys.country}`
   const temp = document.querySelector('.temp').innerHTML = `${Math.round(weather.main.temp)}<span>&#176;C</span>`
   const weatherDescription = document.querySelector('.weatherEl').innerHTML = weather.weather[0].main
-  // const iconEL = document.querySelector('.date').innerHTML = weather.weather[1].description
 }
