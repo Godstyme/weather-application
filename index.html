@@ -7,9 +7,12 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+  <!-- =====The layout of the site ====== -->
   <main>
+    <!-- =====The header of the site start here ====== -->
     <header class="header">
-      <h1 class="caption">Weather Forcasts</h1>
+      <h1 class="caption">Weather Forecasting</h1>
         <form id="searchForm" class="search-form">
           <div class="btnHolder">
             <!-- <label for="searchInput"><i class="fas fa-search-location icon"></i></label> -->
@@ -19,7 +22,12 @@
           </div>
         </form>
     </header>
+    <!-- =====The header of the site end here====== -->
+
+    <!-- =====The body of the site start here====== -->
     <section class="mainbody">
+
+      <!-- =====The div that holds the current day information start here====== -->
       <div class="mainInfo">
         <div class="dayHolder">
           <address>Abakaliki, <span>NG</span></address>
@@ -28,12 +36,14 @@
         <div class="temp">32&#176;C</div>
         <div class="weatherDesc"><span>logo</span> Rain</div>
         <div class="curSummary">
+
+          <!-- =====The table that holds sessions weather info start here====== -->
           <table class="currentTableSumm">
             <tr class="curDataRow">
-              <th class="todayRowSumm">Morning</th>
-              <th class="todayRowSumm">Afternoon</th>
-              <th class="todayRowSumm">Evening</th>
-              <th class="todayRowSumm">Night</th>
+              <th class="todaySession">Morning</th>
+              <th class="todaySession">Afternoon</th>
+              <th class="todaySession">Evening</th>
+              <th class="todaySession">Night</th>
             </tr>
             <tr class="curDataRow">
               <td class="curData">32&#176;C</td>
@@ -41,16 +51,54 @@
               <td class="curData">32&#176;C</td>
               <td class="curData">32&#176;C</td>
             </tr>
-            <!-- <tr class="curDataRow">
-              <td rowspan="3">Range</td>
-              <td >Range</td>
-              <td >Range</td>
-            </tr> -->
           </table>
+          <!-- =====The table that holds sections weather info end here====== -->
+
         </div>
       </div>
+      <!-- =====The div that holds the current day information end here====== -->
+
+      
+      <!-- =====The section that holds the daily records start here====== -->
+      <div class="dailyRecordHolder">
+
+        <!-- =====The table that holds daily weather info start here====== -->
+        <table class="tableDailyRecord">
+          <caption>Daily</caption>
+          <tr class="dailyRecordRow">
+            <th class="dailyRecord">Day</th>
+            <th class="dailyRecord">Temperature</th>
+            <th class="dailyRecord">Weather</th>
+            <th class="dailyRecord">Humidity</th>
+            <th class="dailyRecord">Wind Speed</th>
+          </tr>
+          <tr class="dailyRecordRow">
+            <td class="dailyRecord">Wed, Sept 9</td>
+            <td class="dailyRecord">23&#176;C</td>
+            <td class="dailyRecord">Cloudy</td>
+            <td class="dailyRecord">80%</td>
+            <td class="dailyRecord">3.8</td>
+          </tr>
+          <tr class="dailyRecordRow">
+            <td class="dailyRecord"><span>Thur, Sept 10</span></td>
+            <td class="dailyRecord">27&#176;C</td>
+            <td class="dailyRecord">Rain</td>
+            <td class="dailyRecord">90%</td>
+            <td class="dailyRecord">0.9</td>
+          </tr>
+        </table>
+        <!-- =====The table that holds daily weather info end here====== -->
+      </div>
+      <!-- =====The section that holds the daily records end here====== -->
     </section>
+    <footer>
+      <div><span><a href="http://github.com/godstyme">Github</a></span>&nbsp;|&nbsp;<span><a href="http://twiiter.com/godstyme">Twitter</a></span></div>
+      <div>
+        Copyright &copy; <span class="year"> </span>&nbsp; All right reserve | Designed by Godstime Onyibe &hearts;
+      </div>
+    </footer>
   </main>
+  <!-- =====The layout of the site end here ====== -->
   
   <script src="assets/js/app.js"></script>
 </body>

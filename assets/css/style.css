@@ -6,15 +6,19 @@
 :root{
   --color: #fff;
 }
+
+/* ==== main layout style ======= */
 main{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url(../imgs/bgg.jpeg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   padding-bottom: 30px;
 }
+
+/* ==== style about content in header start here ======= */
 h1.caption{
   text-align: center;
   font-family: monospace;
@@ -26,16 +30,16 @@ h1.caption{
 header > div.searchHolder{
   text-align: center;
 }
-.searchInput{
+input.searchInput{
   height: 3em;
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
-  border: 1px solid var(--color,green);
+  border: 1px solid var(--color,#fff);
   outline: none;
   padding-left: 0.8em;
   font-size: 0.9em;
 }
-.btnHolder{
+div.btnHolder{
   display: flex;
   justify-content: center;
 }
@@ -51,12 +55,17 @@ input.btn{
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
 }
+/* ==== style about content in header end here ======= */
+
+/* ==== style about content in body section start here ======= */
 section div.mainInfo{
   width: 50%;
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5));
   margin: 50px auto;
   border-radius: 10px;
-  padding-bottom: 20px;
+  padding: 5px 0px 25px 0px;
+  box-shadow: 2px 2px 10px #000;
+
 }
 section > div > div.dayHolder{
   padding: 1em;
@@ -81,21 +90,22 @@ div.weatherDesc{
   text-align: center;
   font-size: 1.3em;
 }
-.curSummary{
+div.curSummary{
   color: var(--color,#fff);
-  margin-top: 1em;
+  padding: 30px 0px 5px 0px;
 }
+
+/* ==== style about table that hold current day info start here ======= */
 table.currentTableSumm{
   border-collapse: collapse;
   width: 100%;
   font-size: 1.5em;
-  
 }
 tr.curDataRow{
   border-bottom: 0.1em solid var(--color,#fff);
   border-top: 0.1em solid var(--color,#fff);
 }
-th.todayRowSumm{
+th.todaySession{
   padding: 0.8em 0em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -104,31 +114,89 @@ td.curData{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
 }
-th.todayRowSumm:nth-child(1),th.todayRowSumm:nth-child(2),th.todayRowSumm:nth-child(3),
+th.todaySession:nth-child(1),th.todaySession:nth-child(2),th.todaySession:nth-child(3),
 td.curData:nth-child(1),td.curData:nth-child(2),td.curData:nth-child(3){
   border-right: 0.1em solid var(--color,#fff);
 }
+/* ==== style about table that hold current day info end here ======= */
 
+/* ==== style about table that hold daily record start here ======= */
+div.dailyRecordHolder{
+  font-size: 1.5em;
+  width: 50%;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5));
+  margin: 50px auto;
+  border-radius: 10px;
+  padding: 5px 0px 25px 0px;
+  box-shadow: 2px 2px 10px #000;
+  padding: 30px 0px;
+  /* overflow-x: scroll; */
+}
+div table.tableDailyRecord{
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1em;
+  color: var(--color,#fff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+caption{
+  color:  var(--color,#fff);
+  padding-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+tr.dailyRecordRow{
+  border-bottom: 0.1em solid var(--color,#fff);
+  border-top: 0.1em solid var(--color,#fff);
+}
+th.dailyRecord,td.dailyRecord{
+  text-align: left;
+  padding: 5px 2px 0px 10px;
+}
+th.dailyRecord:nth-child(1),th.dailyRecord:nth-child(2),th.dailyRecord:nth-child(3),th.dailyRecord:nth-child(4),
+td.dailyRecord:nth-child(1),td.dailyRecord:nth-child(2),td.dailyRecord:nth-child(3),td.dailyRecord:nth-child(4){
+  border-right: 0.1em solid var(--color,#fff);
+}
+/* ==== style about table that hold daily record start here ======= */
 
+/* =====style about footer start here ========= */
+footer{
+  color: var(--color,#fff);
+  text-align: center;
+  font-family: monospace;
+}
+footer > div span a{
+  text-decoration: none;
+  color: var(--color,#fff);
+  padding: 15px;
+  font-family: monospace;
+}
+footer > div{
+  padding-top: 20px;
+}
+/* =====style about footer start here ========= */
+
+/* ==== style about content in body section start here ======= */
+
+/* ==== media query for the following devices start here ======= */
 @media screen and (max-width: 450px) and (min-width: 200px){
-  .searchInput{
+  input.searchInput{
     width: 60%;
     height: 3em;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
-    border: 1px solid var(--color,green);
+    border: 1px solid var(--color,#fff);
     outline: none;
     padding-left: 0.8em;
     font-size: 0.9em;
   }
-  .btnHolder{
+  div.btnHolder{
     display: flex;
     justify-content: center;
   }
   input.btn{
     height: 2.15em;
     width: 30%;
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5));
     cursor: pointer;
     outline: none;
     border: inherit;
@@ -136,19 +204,35 @@ td.curData:nth-child(1),td.curData:nth-child(2),td.curData:nth-child(3){
     font-size: 1.3em;
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
+    box-shadow: 2px 2px 10px #000;
   }
   section div.mainInfo{
     overflow-x: scroll;
     width: 95%;
     font-size: 0.8em;
   }
+  div.dailyRecordHolder{
+    width: 95%;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5));
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 5px 0px 30px 0px;
+    box-shadow: 2px 2px 10px #000;
+    overflow-x:auto;
+  }
+  th.dailyRecord,td.dailyRecord{
+    text-align: left;
+    font-size: 0.9em;
+  }
 }
+/* ==== media query for the following devices end here ======= */
 
+/* ==== media query for the following devices start here ======= */
 @media screen and (max-width: 800px) and (min-width: 451px){
   input.btn{
     height: 2.15em;
     width: 15%;
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6));
     cursor: pointer;
     outline: none;
     border: inherit;
@@ -156,10 +240,35 @@ td.curData:nth-child(1),td.curData:nth-child(2),td.curData:nth-child(3){
     font-size: 1.3em;
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
+    box-shadow: 2px 2px 10px #000;
   }
   section div.mainInfo{
     overflow-x: scroll;
     width: 95%;
     font-size: 1em;
   }
+  div.dailyRecordHolder{
+    width: 95%;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5));
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 5px 0px 25px 0px;
+    box-shadow: 2px 2px 10px #000;
+    overflow-x: scroll;
+  }
 }
+/* ==== media query for the following devices end here ======= */
+
+/* ==== media query for the following devices start here ======= */
+@media screen and (max-width: 1024px){
+  div.dailyRecordHolder{
+    width: 95%;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5));
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 5px 0px 25px 0px;
+    box-shadow: 2px 2px 10px #000;
+    overflow-x: auto;
+  }
+}
+/* ==== media query for the following devices end here ======= */
