@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
+  <!-- =========css file here ============= -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
           <div class="btnHolder">
             <!-- <label for="searchInput"><i class="fas fa-search-location icon"></i></label> -->
             <input type="search" name="search" id="inputSearch" class="searchInput" autocomplete="off"
-                placeholder="Search for a location">
+                placeholder="Search for a city">
             <input type="button" value="Search" class="btn">
           </div>
         </form>
@@ -30,11 +31,11 @@
       <!-- =====The div that holds the current day information start here====== -->
       <div class="mainInfo">
         <div class="dayHolder">
-          <address>Abakaliki, <span>NG</span></address>
+          <address ><span class="city">Abakaliki,</span> <span class="country">NG</span></address>
           <span class="date">Tue, &nbsp; Sept 09</span>
         </div>
         <div class="temp">32&#176;C</div>
-        <div class="weatherDesc"><span>logo</span> Rain</div>
+        <div class="weatherDesc"><span class="logo">logo</span> <span class="weatherEl">Rain</span></div>
         <div class="curSummary">
 
           <!-- =====The table that holds sessions weather info start here====== -->
@@ -92,7 +93,7 @@
       <!-- =====The section that holds the daily records end here====== -->
     </section>
     <footer>
-      <div><span><a href="http://github.com/godstyme">Github</a></span>&nbsp;|&nbsp;<span><a href="http://twiiter.com/godstyme">Twitter</a></span></div>
+      <div><span><a href="https://github.com/Godstyme/weatherApp">Github</a></span>&nbsp;|&nbsp;<span><a href="https://twitter.com/GodstimeOnyibe">Twitter</a></span></div>
       <div>
         Copyright &copy; <span class="year"> </span>&nbsp; All right reserve | Designed by Godstime Onyibe &hearts;
       </div>
@@ -100,6 +101,7 @@
   </main>
   <!-- =====The layout of the site end here ====== -->
   
+  <!-- ======= js script here ========= -->
   <script src="assets/js/app.js"></script>
 </body>
 </html>
