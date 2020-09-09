@@ -6,7 +6,7 @@ document.querySelector('.year').innerHTML = cYear
 //  the api key
 const api = {
   key: 'faf89cd0be99a684d9fe16932eb2d34b',
-  baseUrl: 'http://api.openweathermap.org/data/2.5/'
+  baseUrl: 'https://api.openweathermap.org/data/2.5/'
 }
 
 const searchBtn = document.querySelector('.btn').addEventListener('click', function () {
