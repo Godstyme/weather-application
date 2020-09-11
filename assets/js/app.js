@@ -45,6 +45,21 @@ const displayRecord = (weather) => {
   const temp = document.querySelector('.temp').innerHTML = `${Math.round(weather.main.temp)}<span>&#176;C</span>`
   const wind = document.querySelector('.wind').innerHTML = `${Math.round(weather.main.temp)}<span>m/s</span>`
   const humidity = document.querySelector('.humidity').innerHTML = `${Math.round(weather.main.humidity)}<span>%</span>`
-  const pressure = document.querySelector('.pressure').innerHTML = `${Math.round(weather.main.pressure)}<span>&#176;C</span>`
+  const pressure = document.querySelector('.pressure').innerHTML = `${Math.round(weather.main.pressure)}<span>hpa</span>`
   const weatherDescription = document.querySelector('.weatherEl').innerHTML = weather.weather[0].main
+  const descri = document.querySelector('.descri').innerHTML = weather.weather[0].main
+
+  const now = new Date()
+  const date = document.querySelector('.date')
+  date.innerHTML = dateBuild(now)
+}
+
+const dateBuild = (d) => {
+  const months = ['Jan', 'Feb', 'Mar', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat']
+  const day = days[d.getDay()]
+  const date = d.getDate()
+  const month = months[d.getMonth()]
+  const year = d.getFullYear()
+  return `${day}, ${date} ${month} ${year}`
 }
