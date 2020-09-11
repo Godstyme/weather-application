@@ -1,3 +1,12 @@
+// ========service worker registration
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+        .then((reg) => {
+          console.log('Service worker registered.', reg);
+        });
+  });
+}
 // ===== The date that is place at the footer =====
 const date = new Date()
 const cYear = date.getFullYear()
@@ -9,7 +18,7 @@ const api = {
   baseUrl: 'https://api.openweathermap.org/data/2.5/'
 }
 
-const searchBtn = document.querySelector('.btn').addEventListener('click', function () {
+const searchBtn = document.querySelector('.btn').addEventListener('click', () => {
   const search = document.querySelector('#inputSearch')
   getRecord(search.value)
 })

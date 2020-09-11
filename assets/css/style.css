@@ -180,7 +180,7 @@ footer > div{
 @media screen and (max-width: 450px) and (min-width: 200px){
   input.searchInput{
     width: 60%;
-    height: 3em;
+    height: 3.2em;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
     border: 1px solid var(--color,#fff);
@@ -239,7 +239,7 @@ footer > div{
   }
   input.searchInput{
     width: 70%;
-    height: 3em;
+    height: 3.2em;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
     border: 1px solid var(--color,#fff);
