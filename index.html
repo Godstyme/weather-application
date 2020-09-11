@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- =====meta tags here ============ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="description" content="weatherApp">
   <title>Weather App</title>
   <!-- =======web app manifest file here =========== -->
   <!-- <link rel="manifest" href="/site.webmanifest"> -->
@@ -14,8 +17,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0b2830">
-  <meta name="msapplication-TileColor" content="#2b5797">
-  <meta name="theme-color" content="#000000">
+  <!-- <meta name="theme-color" content="#000000"> -->
 
   <!-- ========= font awesome file here ============ -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -50,22 +52,23 @@
           <span class="date">Tue, &nbsp; Sept 09</span>
         </div>
         <div class="temp">32&#176;C</div>
-        <div class="weatherDesc"><span class="logo">logo</span> <span class="weatherEl">Rain</span></div>
+        <div class="weatherDesc"><span class="weatherEl">Rain</span></div>
+        <!-- <div class="weatherDesc"><span class="logo">logo</span> <span class="weatherEl">Rain</span></div> -->
         <div class="curSummary">
 
           <!-- =====The table that holds sessions weather info start here====== -->
           <table class="currentTableSumm">
             <tr class="curDataRow">
-              <th class="todaySession">Morning</th>
-              <th class="todaySession">Afternoon</th>
-              <th class="todaySession">Evening</th>
+              <th class="todaySession">Wind</th>
+              <th class="todaySession">Humidity</th>
+              <th class="todaySession">Pressure</th>
               <th class="todaySession">Night</th>
             </tr>
             <tr class="curDataRow">
-              <td class="curData">32&#176;C</td>
-              <td class="curData">32&#176;C</td>
-              <td class="curData">32&#176;C</td>
-              <td class="curData">32&#176;C</td>
+              <td class="curData wind"></td>
+              <td class="curData humidity"></td>
+              <td class="curData pressure"></td>
+              <td class="curData "></td>
             </tr>
           </table>
           <!-- =====The table that holds sections weather info end here====== -->
@@ -76,10 +79,10 @@
 
       
       <!-- =====The section that holds the daily records start here====== -->
-      <div class="dailyRecordHolder">
+      <!-- <div class="dailyRecordHolder"> -->
 
         <!-- =====The table that holds daily weather info start here====== -->
-        <table class="tableDailyRecord">
+        <!-- <table class="tableDailyRecord">
           <caption>Daily</caption>
           <tr class="dailyRecordRow">
             <th class="dailyRecord">Day</th>
@@ -102,9 +105,9 @@
             <td class="dailyRecord">90%</td>
             <td class="dailyRecord">0.9 </td>
           </tr>
-        </table>
+        </table> -->
         <!-- =====The table that holds daily weather info end here====== -->
-      </div>
+      <!-- </div> -->
       <!-- =====The section that holds the daily records end here====== -->
     </section>
 

@@ -6,6 +6,7 @@ const urlsToCache = [
   '/assets/js/app.js'
 ]
 
+// ========= eventlistener for installation =========
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open(cacheNameOne)
@@ -16,6 +17,7 @@ self.addEventListener('install', (e) => {
   )
 })
 
+// ========= eventlistener for fetch =========
 self.addEventListener('fetch', (e) => {
   e.respondWith(
     caches.match(e.request)
@@ -28,6 +30,7 @@ self.addEventListener('fetch', (e) => {
   )
 })
 
+// ========= eventlistener for activation =========
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then(cacheNames => {

@@ -9,7 +9,7 @@ if ('serviceWorker' in navigator) {
       })
   })
 }
-// ===== The date that is place at the footer =====
+// ===== The date that is placed at the footer =====
 const date = new Date()
 const cYear = date.getFullYear()
 document.querySelector('.year').innerHTML = cYear
@@ -43,5 +43,8 @@ const displayRecord = (weather) => {
   const city = document.querySelector('.city').innerHTML = `${weather.name}`
   const country = document.querySelector('.country').innerHTML = `${weather.sys.country}`
   const temp = document.querySelector('.temp').innerHTML = `${Math.round(weather.main.temp)}<span>&#176;C</span>`
+  const wind = document.querySelector('.wind').innerHTML = `${Math.round(weather.main.temp)}<span>m/s</span>`
+  const humidity = document.querySelector('.humidity').innerHTML = `${Math.round(weather.main.humidity)}<span>%</span>`
+  const pressure = document.querySelector('.pressure').innerHTML = `${Math.round(weather.main.pressure)}<span>&#176;C</span>`
   const weatherDescription = document.querySelector('.weatherEl').innerHTML = weather.weather[0].main
 }
