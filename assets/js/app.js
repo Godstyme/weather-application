@@ -1,11 +1,13 @@
-// ========service worker registration
+// ========registration of service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
-        .then((reg) => {
-          console.log('Service worker registered.', reg);
-        });
-  });
+    navigator.serviceWorker.register('/sw.js')
+      .then((reg) => {
+        console.log('Service worker registered.', reg.scope)
+      }, (err) => {
+        console.log('Service worker registration failed:', err)
+      })
+  })
 }
 // ===== The date that is place at the footer =====
 const date = new Date()
@@ -20,8 +22,14 @@ const api = {
 
 const searchBtn = document.querySelector('.btn').addEventListener('click', () => {
   const search = document.querySelector('#inputSearch')
-  getRecord(search.value)
+  if (search.value.length === 0) {
+    alert('Input a city!!! :)')
+    return false
+  } else {
+    getRecord(search.value)
+  }
 })
+
 
 const getRecord = (qry) => {
   fetch(`${api.baseUrl}weather?q=${qry}&APPID=${api.key}&units=metric`)
