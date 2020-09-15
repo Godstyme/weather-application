@@ -28,6 +28,8 @@ const searchBtn = document.querySelector('.btn').addEventListener('click', () =>
   } else {
     getRecord(search.value)
   }
+  //  Clears the input field after a list has been added
+  document.querySelector('#inputSearch').value = ''
 })
 
 

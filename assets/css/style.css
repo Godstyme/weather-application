@@ -9,6 +9,7 @@
 
 /* ==== main layout style ======= */
 main{
+  min-height: 100vh;
   width: 100%;
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url(../imgs/bgg.jpeg);
   background-size: cover;
