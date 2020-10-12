@@ -1,8 +1,10 @@
 const cacheNameOne = 'version_one'
+const dynamicCacheName = 'weatherApp!'
 const urlsToCache = [
   '/',
   '/index.html',
   '/assets/css/style.css',
+  '/assets/imgs/bgg.JPEG',
   '/assets/js/app.js'
 ]
 
@@ -18,29 +20,36 @@ self.addEventListener('install', (e) => {
 })
 
 // ========= eventlistener for fetch =========
-// self.addEventListener('fetch', (e) => {
-//   e.respondWith(
-//     caches.match(e.request)
-//       .then((response) => {
-//         if (response) {
-//           return response
-//         }
-//         return fetch(e.request)
-//       })
-//   )
-// })
+self.addEventListener("fetch", fetchEvent => {
+  const { req } = fetchEvent;
+  // console.log(req.url);
 
-// ========= eventlistener for activation =========
-// self.addEventListener('activate', (e) => {
-//   e.waitUntil(
-//     caches.keys().then(cacheNames => {
-//       return Promise.all(
-//         cacheNames.map((cacheName) => {
-//           if (cacheAllowlist.indexOf(cacheName) === -1) {
-//             return caches.delete(cacheName)
-//           }
-//         })
-//       )
-//     })
-//   )
-// })
+  fetchEvent.respondWith(
+    caches
+      .match(req)
+      .then(res => {
+        // return res || fetch(fetchEvent.req);
+        if (res) {
+          return res;
+        }
+
+        if (!req.url.includes("https://api.openweathermap.org/data/2.5/")) {
+          return fetch(req);
+        } else {
+          // console.log(req.url);
+          return fetch(req).then(res => {
+            // console.log(res);
+
+            return caches
+              .open(dynamicCacheName)
+              .then(cache => {
+                cache.put(req.url, res.clone());
+                return res;
+              })
+              .catch(err => console.log(err));
+          });
+        }
+      })
+      .catch(err => console.log(err))
+  );
+});
