@@ -1,5 +1,6 @@
 const cacheNameOne = 'version_one'
 const dynamicCacheName = 'weatherApp!'
+
 const urlsToCache = [
   '/',
   '/index.html',
